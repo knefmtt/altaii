@@ -146,20 +146,28 @@ body {
     z-index: 0;
     border-radius: 16px; 
     transition: 0.5s;
-    filter: blur(1px);
 }
 
 .gallery__card:hover{
     transform: scale(1.02);
     z-index: 1;
-    filter: blur(0);
+}
+
+.gallery__card:hover .gallery__photo{
+  filter: blur(0px);
 }
 
 .gallery__photo {
     width: 100%;
     border-radius: 16px;
     object-fit: cover;  
+    filter: blur(1px);
 }
+
+.gallery__photo:hover{
+    filter: blur(0px);
+}
+
 
 .second::after,
 .sixth::after,
@@ -195,10 +203,7 @@ body {
 
     width: 80%;
     height: 100%;
-    filter: blur(0);
 }
-
-/* разобраться с блюром */
 
 .first {
     grid-row: span 2;
